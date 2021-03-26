@@ -1,0 +1,343 @@
+{
+	"info": {
+		"_postman_id": "87f38732-1318-4f94-9213-ffef28589277",
+		"name": "node_rest_example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Home",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"test123@test.com\",\r\n    \"name\":\"Test User\",\r\n    \"password\":\"password\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"test123@test.com\",\r\n    \"password\":\"password\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/posts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxMjNAdGVzdC5jb20iLCJ1c2VySWQiOiI2MDVlMGU3MGVmZWQ4MjAyY2MzODRmMTEiLCJpYXQiOjE2MTY3ODI3MzUsImV4cCI6MTYxNjc4NjMzNX0.qbxdF2Fvmw7VAiUheotmhgAAPh-qcbKV-iwuG11-Br8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "\"title\"",
+							"value": " \"house\",",
+							"type": "text"
+						},
+						{
+							"key": "\"content\"",
+							"value": " \"nice house!\",",
+							"type": "text"
+						},
+						{
+							"key": "\"creator\"",
+							"value": " \"605e0e70efed8202cc384f11\"",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/tusha/OneDrive/Pictures/3bhk-datta_vihar.png"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/posts/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/posts/605e2e339ba034537c9befe6",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxMjNAdGVzdC5jb20iLCJ1c2VySWQiOiI2MDVlMGU3MGVmZWQ4MjAyY2MzODRmMTEiLCJpYXQiOjE2MTY3ODI3MzUsImV4cCI6MTYxNjc4NjMzNX0.qbxdF2Fvmw7VAiUheotmhgAAPh-qcbKV-iwuG11-Br8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/posts/605e2e339ba034537c9befe6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts",
+						"605e2e339ba034537c9befe6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/posts/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxMjNAdGVzdC5jb20iLCJ1c2VySWQiOiI2MDVlMGU3MGVmZWQ4MjAyY2MzODRmMTEiLCJpYXQiOjE2MTY3ODI3MzUsImV4cCI6MTYxNjc4NjMzNX0.qbxdF2Fvmw7VAiUheotmhgAAPh-qcbKV-iwuG11-Br8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/posts/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/posts/605e2e339ba034537c9befe6",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxMjNAdGVzdC5jb20iLCJ1c2VySWQiOiI2MDVlMGU3MGVmZWQ4MjAyY2MzODRmMTEiLCJpYXQiOjE2MTY3ODUyOTAsImV4cCI6MTYxNjc4ODg5MH0.AnBRiduwBiSxaA0EBaJmcgrHkNG7z12nPNkEc3iZ7w8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "\"title\"",
+							"value": " \"house!\",",
+							"type": "text"
+						},
+						{
+							"key": "\"content\"",
+							"value": " \"nice house!!!!\",",
+							"type": "text"
+						},
+						{
+							"key": "\"creator\"",
+							"value": " \"605e0e70efed8202cc384f11\"",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/tusha/OneDrive/Pictures/2bhk-datta_vihar.png"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/posts/605e2e339ba034537c9befe6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts",
+						"605e2e339ba034537c9befe6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/posts/605e2e339ba034537c9befe6",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxMjNAdGVzdC5jb20iLCJ1c2VySWQiOiI2MDVlMGU3MGVmZWQ4MjAyY2MzODRmMTEiLCJpYXQiOjE2MTY3ODUyOTAsImV4cCI6MTYxNjc4ODg5MH0.AnBRiduwBiSxaA0EBaJmcgrHkNG7z12nPNkEc3iZ7w8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/posts/605e2e339ba034537c9befe6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts",
+						"605e2e339ba034537c9befe6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/posts?page=2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxMjNAdGVzdC5jb20iLCJ1c2VySWQiOiI2MDVlMGU3MGVmZWQ4MjAyY2MzODRmMTEiLCJpYXQiOjE2MTY3ODUyOTAsImV4cCI6MTYxNjc4ODg5MH0.AnBRiduwBiSxaA0EBaJmcgrHkNG7z12nPNkEc3iZ7w8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/posts?page=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"posts"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
