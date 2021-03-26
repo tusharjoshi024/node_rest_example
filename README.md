@@ -23,7 +23,7 @@ This code is an example of REST server, backend for any modern web app.
 
 ## Important inclusions in this example to consider
 
-####1. Mongoose library and connection with MongoDB
+#### 1. Mongoose library and connection with MongoDB
 
   ###### app.js
 
@@ -64,7 +64,7 @@ This code is an example of REST server, backend for any modern web app.
 
     module.exports = mongoose.model('Post', postSchema);
 
-####2. Authentication filter and its usage
+#### 2. Authentication filter and its usage
   ###### is-auth.js
     const jwt = require('jsonwebtoken');
 
@@ -97,7 +97,7 @@ This code is an example of REST server, backend for any modern web app.
     router.get('/', isAuth, postController.getPosts);
     ...
 
-####3. File Operations 
+#### 3. File Operations 
   ###### app.js
     ...
     const path = require('path');
@@ -132,7 +132,7 @@ This code is an example of REST server, backend for any modern web app.
     ...
 
 
-####4. CORS Fixes 
+#### 4. CORS Fixes 
   ###### app.js 
     ...
     app.use((req, res, next) => {
@@ -146,7 +146,7 @@ This code is an example of REST server, backend for any modern web app.
     });
     ...
 
-####5. Generic error handler
+#### 5. Generic error handler
   ###### app.js
     ...
     app.use((error, req, res, next) => {
